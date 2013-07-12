@@ -1,6 +1,7 @@
 (defproject
   artpub
   "0.1.0-SNAPSHOT"
+
   :dependencies
   [[org.clojure/clojure "1.5.1"]
    [lib-noir "0.6.6"]
@@ -24,6 +25,7 @@
      javax.jms/jms
      com.sun.jdmk/jmxtools
      com.sun.jmx/jmxri]]]
+
   :cljsbuild
   {:builds
    [{:source-paths ["src-cljs"],
@@ -31,20 +33,23 @@
      {:pretty-print false,
       :output-to "resources/public/js/site.js",
       :optimizations :advanced}}]}
+
   :ring
   {:handler artpub.handler/war-handler,
    :init artpub.handler/init,
    :destroy artpub.handler/destroy}
+
   :profiles
   {:production
    {:ring
     {:open-browser? false, :stacktraces? false, :auto-reload? false}},
    :dev
    {:dependencies [[ring-mock "0.1.5"] [ring/ring-devel "1.1.8"]]}}
-  :url
-  "http://example.com/FIXME"
-  :plugins
-  [[lein-ring "0.8.5"] [lein-cljsbuild "0.3.2"]]
-  :description
-  "FIXME: write description"
+
+  :url "http://msync.org/"
+
+  :plugins [[lein-ring "0.8.5"] [lein-cljsbuild "0.3.2"]]
+
+  :description "A Simple Articles Publisher"
+
   :min-lein-version "2.0.0")
