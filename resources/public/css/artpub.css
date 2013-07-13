@@ -1,0 +1,219 @@
+body {
+  position: relative;
+  padding-top: 25px;
+  font-size: 16px;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 20px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+.sidenav {
+  width: 160px;
+  margin: 25px 0 0;
+  padding: 0;
+  background-color: #ddd;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: 0 3px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 3px 4px rgba(0,0,0,.065);
+          box-shadow: 0 3px 4px rgba(0,0,0,.065);
+  top: 25px;
+  margin-top: 25px;
+  margin-right: 0;
+}
+
+.sidenav.affix {
+  top: 25px;
+}
+
+.sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+.article-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px; 
+  text-shadow: -1px -3px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+}
+
+section > header {
+  margin-bottom: 8px;
+  margin-top: 18px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,.4), 0 0 10px rgba(0,0,0,.075);
+}
+
+caption.strong {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .sidenav {
+    width: 180px;
+    margin-top: 25px;
+    margin-right: 0;
+  }
+  .sidenav > li > a {
+    width: 171px \9; /* Override the previous IE8-9 hack */
+  }
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Inline-block quick links for more spacing */
+  .quick-links li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  /* When affixed, space properly */
+  .sidenav {
+    top: 0;
+    width: 180px;
+    margin-top: 25px;
+    margin-right: 0;
+  }
+
+  .subhead h1,
+  .subhead .lead {
+    margin-right: 0;
+  }
+
+  .carbonad {
+    position: static;
+    width: auto !important;
+    margin-top: 30px !important;
+  }
+
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  /* Adjust sidenav width */
+  .sidenav {
+    width: 166px;
+    margin-top: 20px;
+  }
+  .sidenav.affix {
+    top: 0;
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  .masthead h1 {
+    font-size: 90px;
+  }
+  .masthead p,
+  .masthead .btn {
+    font-size: 24px;
+  }
+  .marketing .span4 {
+    margin-bottom: 40px;
+  }
+
+  .carbonad {
+    position: static;
+    width: auto !important;
+    margin: 40px -20px -40px !important;
+    padding: 20px !important;
+    overflow: hidden; /* clearfix */
+    border-radius: 0;
+  }
+
+  /* Sidenav */
+  .sidenav {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .sidenav.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
+  /* Unfloat the back to top link in footer */
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer p {
+    margin-bottom: 9px;
+  }
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* center align subhead text like the masthead */
+  .subhead h1,
+  .subhead p {
+    text-align: center;
+  }
+
+  /* Do our best to make tables work in narrow viewports */
+  table code {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  /* Tighten up footer */
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: right;
+  }
+}
