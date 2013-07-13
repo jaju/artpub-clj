@@ -9,3 +9,5 @@ pom.xml
 /.env
 /resources/public/site.db.h2.db
 *.log
+*.swp
+*.swo
