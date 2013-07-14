@@ -19,5 +19,6 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2013Ravindra R. Jaju
+Copyright, 2013 - Ravindra R. Jaju
+
 Feel free to use in any which way. No licensing restrictions.
