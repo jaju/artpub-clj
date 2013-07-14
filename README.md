@@ -1,6 +1,9 @@
 # artpub
 
-FIXME
+Sample application developed for a clojure-pune meetup,
+using the luminus template.
+You may wish to follow individual commit-messages to see how we change
+code in steps.
 
 ## Prerequisites
 
@@ -16,4 +19,5 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2013 FIXME
+Copyright © 2013Ravindra R. Jaju
+Feel free to use in any which way. No licensing restrictions.
